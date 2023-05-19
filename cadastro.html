@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+
+  <link rel="stylesheet" href="./css/cadastro.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+<body class="offcanvas">
+    <nav class="gtco-nav" role="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-2 col-xs-12">
+					<div id="gtco-logo"><a href="index.html">ICM</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1 main-nav">
+					<ul>
+						<li class="active"><a href="index.html" data-nav-section="home">Página inicial</a></li>
+						<li><a href="index.html" data-nav-section="about">Quem somos</a></li>
+						<li><a href="index.html" data-nav-section="practice-areas">Serviços</a></li>
+						<li class="btn-cta"><a href="index.html" data-nav-section="contact"><span>Contato</span></a></li>
+						</li>
+            <li><a href="http://freehtml5.co/" class="external" data-nav-section="register">Cadastro</a></li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</nav>
+
+  <div class="line"></div>
+  <div class="page">
+    <div class="form">
+      <header>
+        <h1>Cadastro</h1>
+      </header>
+      
+      <form action="https://api.sheetmonkey.io/form/jngXyAKYbs1RW3cCso2Pkb" method="post" id="register">
+        <fieldset>
+          <div class="fieldset-wrapper">
+            <div class="user-name">
+              <div class="input-wrapper">
+                <label for="userFirstname">Nome</label>
+                <input type="text" id="userFirstname" 
+                name="userFirstname
+                ">
+              </div>
+              <div class="input-wrapper">
+                <label for="userLastname">Sobrenome</label>
+                <input type="text" id="userLastname" 
+                name="userLastname">
+              </div>
+            </div>
+    
+            <div class="input-wrapper">
+              <label for="cpf">CPF</label>
+              <input type="text" name="cpf" \
+          pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" \
+          title="Digite um CPF no formato: xxx.xxx.xxx-xx">
+            </div>
+
+            <div class="user-data">
+              <div class="input-wrapper">
+                <label for="birthdayDate">Data de nascimento</label>
+                <input type="date" id="date" name="birthdayDate" style="text-transform:uppercase" >
+              </div>
+              <div class="input-wrapper">
+                <label for="gender">Gênero</label>
+                <select name="gender" id="gender">
+                  <option value="">Selecione</option>
+                  <option value="F">Feminino</option>
+                  <option value="M">Masculino</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="input-wrapper">
+              <label for="email">Email</label>
+              <input type="email" name="email">
+            </div>
+            <div class="input-wrapper">
+              <label for="number">Telefone para contato</label>
+              <input type="tel" id="number" name="number" placeholder="(xx) xxxxx-xxxx">
+            </div>
+
+            <div class="password-wrapper">
+              <div class="input-wrapper">
+                <label for="password">Senha de acesso</label>
+                <input type="password" name="password" minlength="8">
+              </div>
+              <div class="input-wrapper">
+                <label for="passwordConfirm">Confirme sua senha de acesso</label>
+                <input type="password" name="passwordConfirm" minlength="8">
+              </div>
+            </div>
+            <div class="location-wrapper">
+              <div class="input-wrapper">
+                <label for="uf">Estado</label>
+                <select name="uf" id="uf">
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <label for="cities">Cidade</label>
+                <select name="cities" id="cities">,
+                  <option value=""></option>
+                </select>
+              </div>
+            </div>
+
+            <div class="checkbox-wrapper">
+              <input type="checkbox" name="terms">
+              <label for="terms">Concordo com as políticas de atendimento</label>
+            </div>
+          </div>
+        </fieldset>
+  
+        <button type="submit" class="submit-button">
+          Enviar
+        </button>
+      </form>
+    </div>
+
+    <img src="./images/cadastro.png" alt="Desenho de um homem sentado em uma cadeira com um laptop no colo">
+  </div>
+
+    <footer></footer>
+    
+  <script src="./js/script.js"></script>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
