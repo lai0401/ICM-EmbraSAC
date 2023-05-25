@@ -21,14 +21,15 @@ body::before {
   z-index: -1;
 }
 .line {
-  background: #7ed321;
+  background: #19cea1;
   height: .5rem;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #777;
+  background: #e2e1e1 !important;
   position: relative;
+
 }
 
 h1, h2, legend, button {
@@ -202,7 +203,8 @@ fieldset + fieldset {
 
 /*BUTTON*/
 .submit-button {
-  background: #7ed321;
+  background: #19cea1;
+  ;
   border: none;
   border-radius: 8px;
 
@@ -218,15 +220,31 @@ fieldset + fieldset {
 }
 
 .submit-button:hover {
-  background: #62a61a;
+  background: #15a581;
 }
 
-.page img {
+#Loading {
+  width: 6.5rem;
+  animation: Rotating 1s infinite linear;
+}
+
+.page #draw {
   object-fit: contain;
   width: 45rem;
+  margin: 0 auto;
 }
 
 footer {
-  background: #7ed321;
+  background: #19cea1;
   height: 2rem;
 }
+
+@keyframes Rotating {
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+

@@ -22,45 +22,33 @@ window.addEventListener('load', async() => {
   const response = await request.json()
 
   const options = document.createElement("optgroup")
-  options.setAttribute('label', 'UFs')
+  options.setAttribute('label', '')
   response.forEach(function(uf){
     options.innerHTML += '<option> '+uf.sigla+' </option>'
   })
 
   uf.append(options)
 
-})
+}) 
 
+//Animação do botão, para usar futuramente, quando funcionar
+/*
+const submitButton = document.querySelector('#sendForm');
 
+const addingLoading = () => {
+  submitButton.innerHTML = '<img src="./images/NKEOW-removebg-preview.png" id="Loading" alt="">'
 
-//Enviar formulário  de cadastro
-//const handleSubmit = (event) => {
-//  event.preventDefault();
+}
+const removingLoading = () => {
+  submitButton.innerHTML = 'Cadastro finalizado'
+}
+*/
+/*
+const handleSubmit = (event) => {
+  event.preventDefault();
+  addingLoading();
 
-  //const userFirstname = document.querySelector('input[name=userFirstname]').value;
-//  const userLastname = document.querySelector('input[name=userLastname]').value;
-//  const cpf = document.querySelector('input[name=cpf]').value;
-  //const birthdayDate = document.querySelector('input[name=birthdayDate]').value;
-//  const genero = document.querySelector('input[name=gender]').value;
-//  const email = document.querySelector('input[name=email]').value;
-//  const telefone = document.querySelector('input[name=number]').value;
-//  const senha = document.querySelector('input[name=password]').value;
- // const confirmarSenha = document.querySelector('input[name=passwordConfirm]').value;
-//  const uf = document.querySelector('select[name=uf]').value;
-//  const termos = document.querySelector('input[name=terms]').value;
-  
- // fetch('https://api.sheetmonkey.io/form/jngXyAKYbs1RW3cCso2Pkb', {
+  fetch('https://api.sheetmonkey.io/form/jngXyAKYbs1RW3cCso2Pkb').then(() => removingLoading());
+}
 
-   // method: 'post',
-    //headers: {
-     // 'Accept': 'application/json',
-     // 'Content-Type': 'application/json',
-   // },
-    //body: JSON.stringify({ userFirstname, userLastname, cpf, birthdayDate, genero, email, telefone, senha, confirmarSenha, uf, termos}),
-  //});
-//}
-//document.querySelector('form').addEventListener('submit', handleSubmit);
-
-//Enviar reclamação SEM cadastro
-
-////////
+document.querySelector('#register').addEventListener('submit', handleSubmit);*/

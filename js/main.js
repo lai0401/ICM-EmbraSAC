@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 	
 	'use strict';
 
@@ -334,3 +334,53 @@
 
 
 }());
+
+//loading button
+
+const button = document.querySelector('#sendComplaint');
+
+const addLoading = () => {
+	button.innerHTML = '<img src="./images/NKEOW-removebg-preview.png" class="loading" alt="">'
+
+}
+const removeLoading = () => {
+	button.innerHTML = 'Enviado com sucesso!'
+
+}
+//envio de reclamação SEM cadastro
+const manipulateSubmit = (event) => {
+	event.preventDefault();
+	addLoading();
+		const title = document.querySelector('textarea[name=title]').value;
+		const message = document.querySelector('textarea[name=message]').value;
+		const file = document.querySelector('input[name=file]').value;
+		const name = document.querySelector('input[name=name]').value;
+		const number = document.querySelector('input[name=number]').value
+
+		fetch('https://api.sheetmonkey.io/form/5Q1EwWy4X1StseYEp1ZvW8', {
+
+		method: 'post',
+		headers: {
+		'Accept': 'application/json',
+		'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({title, message, file, name, number}),
+
+	}).then(() => removeLoading());
+	}
+	
+	document.querySelector('form').addEventListener('submit', manipulateSubmit);
+
+	
+
+	function catchNewSelect(){
+		let select = document.querySelector('#problem');
+		let optionValue = select.options[select.selectedIndex];
+
+		let text = optionValue.text;
+
+		console.log(text);
+
+	}
+	catchNewSelect()
+

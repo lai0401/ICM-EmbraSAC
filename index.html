@@ -232,19 +232,19 @@
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-md-push-6 animate-box">
-					<form action="https://api.sheetmonkey.io/form/5Q1EwWy4X1StseYEp1ZvW8" id="contact" method="post">
+					<form action="" id="contact" method="post">
 						<div class="form-group">
 							<label for="problem" class="sr-only">Qual o problema?</label>
-							<select type="text" class="form-control" placeholder="Tipo de problema" id="problem" name="problem">
-								<option value="Tipo de problema">Tipo de problema</option>
+							<select class="form-control" placeholder="Tipo de problema" id="problem" name="problem" onchange="catchNewSelect()">
+								<option value="" selected>Tipo de problema</option>
 								<option value="">Problema</option>
-								<option value="">Produto/Serviço</option>
+								<option value="products/services">Produto/Serviço</option>
 								<option value="">Outro</option>
 							</select>
 						</div>
 						<div class="form-group">
 							<label for="empresa" class="sr-only">Empresa</label>
-							<select type="text" class="form-control" placeholder="Empresa" id="empresa" name="empresa">
+							<select type="text" class="form-control" placeholder="Empresa" id="empresas" name="empresas">
 								<option value=""></option>
 							</select>
 						</div>
@@ -269,7 +269,9 @@
 							<input type="number" class="form-control" placeholder="Telefone (WhatsApp)" id="name" name="number">
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Enviar reclamação" class="btn btn-primary">
+							<button id="sendComplaint" class="btn btn-primary" >
+								Enviar reclamação
+							</button>
 						</div>
 					</form>
 				</div>
@@ -288,7 +290,7 @@
 					</p>
 					<p class="pull-right">
 						<ul class="gtco-social-icons pull-right">
-							<li><a href="" target="_blank"><i class="icon-telegram">
+							<li><a href="https://criarmeulink.com.br/u/1684847218" target="_blank"><i class="icon-telegram">
 								<img src="./images/icone-telegramme-symbole-logo-noir.svg" alt="Logo do Telegram">
 							</i></a></li>
 							<li><a href="https://api.whatsapp.com/send?phone=5528999736214" target="_blank"><i class="icon-whatsapp">
@@ -323,34 +325,9 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+	<script src="./js/select-form.js"></script>
+
 	<!--nem o select e o file foram capturados no fromulário. Entender como fazer isso funcionar. -->
-
-	<!--<script>
-
-		const manipulateSubmit = (event) => {
-  	event.preventDefault();
-
-			const problem = document.querySelector('input[name=problem]').value;
-			const empresa = document.querySelector('input[name=empresa]').value;
-			const title = document.querySelector('textarea[name=title]').value;
-			const message = document.querySelector('textarea[name=message]').value;
-			const file = document.querySelector('input[name=file]').value;
-			const name = document.querySelector('input[name=name]').value;
-			const number = document.querySelector('input[name=number]').value
-
-  		fetch('https://api.sheetmonkey.io/form/5Q1EwWy4X1StseYEp1ZvW8', {
-
-  		method: 'post',
-  		headers: {
-    	'Accept': 'application/json',
-    	'Content-Type': 'application/json',
-  		},
-  		body: JSON.stringify({problem, empresa, title, message, file, name, number}),
-			});	
-		}
-
-		document.querySelector('form').addEventListener('submit', manipulateSubmit);
-	</script>-->
 
 	</body>
 </html>

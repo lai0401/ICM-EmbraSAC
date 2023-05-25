@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadastro</title>
 
+  <link rel="shortcut icon" href="./images/Arthur_Logo_ICM-removebg-preview (1).png">
+
   <link rel="stylesheet" href="./css/cadastro.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/bootstrap.css">
@@ -15,7 +17,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-2 col-xs-12">
-					<div id="gtco-logo"><a href="index.html">ICM</a></div>
+					<div id="gtco-logo"><a href="index.html">
+            <img src="./images/Arthur Logo ICM.png" alt="">
+          </a></div>
 				</div>
 				<div class="col-xs-10 text-right menu-1 main-nav">
 					<ul>
@@ -39,21 +43,14 @@
         <h1>Cadastro</h1>
       </header>
       
-      <form action="" id="register">
+      <form action="https://api.sheetmonkey.io/form/jngXyAKYbs1RW3cCso2Pkb" id="register" method="post">
         <fieldset>
           <div class="fieldset-wrapper">
-            <div class="user-name">
-              <div class="input-wrapper">
-                <label for="userFirstname">Nome</label>
-                <input type="text" id="userFirstname" 
-                name="userFirstname
-                ">
-              </div>
-              <div class="input-wrapper">
-                <label for="userLastname">Sobrenome</label>
-                <input type="text" id="userLastname" 
-                name="userLastname">
-              </div>
+            <div class="input-wrapper">
+              <label for="name">Nome completo</label>
+              <input type="text" id="name" 
+              name="name
+              ">
             </div>
     
             <div class="input-wrapper">
@@ -74,6 +71,8 @@
                   <option value="">Selecione</option>
                   <option value="F">Feminino</option>
                   <option value="M">Masculino</option>
+                  <option value="Não-binário">Não binário</option>
+                  <option value="Outro">Outro</option>
                 </select>
               </div>
             </div>
@@ -119,16 +118,29 @@
           </div>
         </fieldset>
   
-        <button type="submit" class="submit-button">
-          Enviar
+        <button type="submit" class="submit-button" id="sendForm">
+          Finalizar cadastro
         </button>
       </form>
     </div>
 
-    <img src="./images/cadastro.png" alt="Desenho de um homem sentado em uma cadeira com um laptop no colo">
+    <img id="draw" src="./images/cadastro.png" alt="Desenho de um homem sentado em uma cadeira com um laptop no colo">
   </div>
+  
+  <footer>
+      
+        <p class="pull-right">
+          <ul class="gtco-social-icons pull-right">
+            <li><a href="" target="_blank"><i class="icon-telegram">
+              <img src="./images/icone-telegramme-symbole-logo-noir.svg" alt="Logo do Telegram">
+            </i></a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5528999736214" target="_blank"><i class="icon-whatsapp">
+              <img src="./images/images.svg" alt="Logo do Whatsapp">
+            </i></a></li>
+          </ul>
+        </p>
 
-    <footer></footer>
+    </footer>
     
   <script src="./js/script.js"></script>
 
